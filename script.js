@@ -28,6 +28,15 @@ async function gettopheadling(){
         {
            document.getElementById('middle').innerHTML+=`<div class="middlechild"><img src="${data.articles[index].urlToImage}"> <a href="${data.articles[index].url}">${data.articles[index].title}</a></div>`   
         }
+        for(let index=10;index<=11;index++)
+        {
+           document.getElementById('bottom').innerHTML+=`<div class="bottomchild"><img src="${data.articles[index].urlToImage}"> <a href="${data.articles[index].url}">${data.articles[index].title}</a></div>`   
+        }
+        for(let index=12;index<=19;index++)
+        {
+           document.getElementById('recent').innerHTML+=`
+           <div class="recentchild"><img src="${data.articles[index].urlToImage}"> <a href="${data.articles[index].url}">${"Click To Read Articles--"}</a></div>` 
+        }
     } catch(error){
         console.log(error);
     }

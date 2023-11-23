@@ -12,6 +12,14 @@ body{
     width: 100vw;
     gap: 2rem;
 }
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100);
+    }
+}
 header{
     display: flex;
     align-items: center;
@@ -19,7 +27,7 @@ header{
     width: 100vw;
 }
 .logo img{
-    width: 6rem;
+    width: 8rem;
 }
 li{
     list-style: none;
@@ -111,6 +119,7 @@ main{
 .topchild2 a:hover{
     color: red;
 }
+/* MIDDLE */
 #middle{
     display: flex; 
     gap: 1.5rem;
@@ -130,4 +139,115 @@ main{
 }
 .middlechild a:hover{
     color: red;
+}
+#bottom{
+    padding: 2rem;
+    border: 2px solid wheat;
+    display: flex;
+    gap: 2rem;
+    /* background-color: red; */
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+.bottomchild{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red;; */
+    /* border: 2px solid green; */
+    width:32rem;
+    /* border: 2px solid green; */
+    align-items: center;
+    gap: 2rem;
+}
+.bottomchild a{
+    color: red;
+}
+.bottomchild img{
+    width: 31.7rem;
+}
+/* RECENT */
+#recent{
+   display: flex;
+   /* flex-direction: column; */
+   /* animation: 5s slide infinite linear; */
+   gap: 2rem;
+   /* border: 2px solid red; */
+   /* overflow-x: hidden; */
+}
+.recentchild{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+.recentchild img{
+    width: 30rem;
+    /* border-radius: 0.4rem; */
+}
+.recentchild a{
+    color: red;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 2s;
+    font-size: 1rem;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #100F0F;
+    color: white;
+    padding: 2rem;
+    width: 100vw;
+    gap: 2rem;
+}
+.topfoot{
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+}
+.footleft{
+    /* border: 2px solid red; */
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.social{
+    display: flex;
+    gap: 2rem;
+}
+.social a{
+    color: wheat;
+    transition: 2s;
+}
+.social a:hover{
+    color: red;
+    transform:rotate(360deg);
+}
+.footmiddle{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    gap: 2rem;
+}
+.footmiddle input{
+    width: fit-content;
+    padding-left: 2rem;
+}
+.footbottom{
+    display: flex;
+    gap: 20rem;
+    align-items: center;
+}
+.fa-hand-point-up{
+    font-size: 3rem;
+    color: red;
+}
+.mypro img{
+    width: 10rem;
+    border-radius: 50%;
 }
