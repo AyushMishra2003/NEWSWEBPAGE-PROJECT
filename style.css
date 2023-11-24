@@ -12,14 +12,7 @@ body{
     width: 100vw;
     gap: 2rem;
 }
-@keyframes slide {
-    from{
-        transform: translateX(0);
-    }
-    to{
-        transform: translateX(-100);
-    }
-}
+
 header{
     display: flex;
     align-items: center;
@@ -250,4 +243,7 @@ footer{
 .mypro img{
     width: 10rem;
     border-radius: 50%;
+}
+.owl-carousel{
+    border: 2px solid red;
 }
