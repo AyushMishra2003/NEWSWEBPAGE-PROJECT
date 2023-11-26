@@ -15,14 +15,20 @@
      <div class="logo" id="top">
         <img src="./image/logo1.png" alt="websitelogo">
      </div>
-     <nav>
+     <nav id="nav">
         <li><a href="#">Life Style</a></li>
         <li><a href="#">Travel</a></li>
         <li><a href="#">Sport</a></li>
         <li><a href="#">Technology</a></li>
-        <li><a href="#">Latest News</a></li>
-        <li><a href="#">Country</a></li>
+        <!-- </div>
+        <div class="closebar">
+         <i class="fa-solid fa-xmark"></i>
+        </div>      -->
      </nav>
+     <div class="hambar">
+      <button id="hambtn"><i class="fa-solid fa-bars"></i></button>
+      <button id="closebar"><i class="fa-solid fa-xmark"></i></button>
+     </div> 
    </header>
    <main>
       <div class="top">
@@ -31,9 +37,17 @@
       </div>
        <div id="middle"></div>
        <h1>Weeky Top News</h1>
-       <div id="bottom" class="owl-carousel owl-theme"> </div>
+       <div id="bottom" > </div>
            <h1>Recent Articles</h1>
-            <div id="recent" class="owl-carousel owl-theme"></div>
+           <!-- <div class="recent-wrap"> -->
+               
+               <div class="gallery"> 
+                  <i class="fa-solid fa-backward" id="back"></i>  
+                    <div id="recent"> </div> 
+                  <i class="fa-solid fa-forward" id="forward"></i>
+               </div>
+           </div>
+           
        </div>
    </main>
    <footer>
@@ -66,8 +80,7 @@
    </footer>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <script src="./p1.js"></script>
-    <script type="text/javascript">$('.owl-carousel').owlCarousel({
+    <!-- <script type="text/javascript">$('.owl-carousel').owlCarousel({
         loop:true,
         margin:10,
         nav:true,
@@ -82,7 +95,7 @@
                 items:5
             }
         }
-    })</script>
+    })</script> -->
 </body>
 <script src="./script.js"></script>
 </html>

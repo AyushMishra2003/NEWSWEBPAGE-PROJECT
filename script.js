@@ -20,30 +20,31 @@ async function gettopheadling(){
         result.forEach(function(item){
             if(index<1)
             {
-                document.getElementById('right-top').innerHTML+=`<div class="topchild1"><img src="${result[0].urlToImage}"><a href=${result[0].url}>${result[0].title}</a></div>`
+                document.getElementById('right-top').innerHTML+=`<div class="topchild1"><img src="${item.urlToImage}"><a href=${item.url}>${item.title}</a></div>`
             }
             else
             {
-                if(index<=4)
+                if(index<=3)
                 {
-                    document.getElementById('left-top').innerHTML+=`<div class="topchild2"><img src="${result[index].urlToImage}"> <a href="${result[index].url}">${result[index].title}</a></div>`   
+                    document.getElementById('left-top').innerHTML+=`<div class="topchild2"><img src="${item.urlToImage}"> <a href="${item.url}">${item.title}</a></div>`   
                 }
                 else
                 {
-                    if(index<=9)
+                    if(index<=7)
                     {
-                        document.getElementById('middle').innerHTML+=`<div class="middlechild"><img src="${result[index].urlToImage}"> <a href="${result[index].url}">${result[index].title}</a></div>`   
-                    }
+                        document.getElementById('middle').innerHTML+=`<div class="middlechild"><img src="${item.urlToImage}"> <a href="${item.url}">${item.title}</a></div>`
+                    }   
+    
                     else
                     {
-                        if(index<=11)
+                        if(index<=9)
                         {
-                            document.getElementById('bottom').innerHTML+=`<div class="bottomchild"><img src="${result[index].urlToImage}"> <a href="${result[index].url}">${result[index].title}</a></div>` 
+                            document.getElementById('bottom').innerHTML+=`<div class="bottomchild"><img src="${item.urlToImage}"> <a href="${item.url}">${item.title}</a></div>` 
                         }
                         else
                         {
                             document.getElementById('recent').innerHTML+=`
-                            <div class="recentchild item"><img src="${result[index].urlToImage}"> <a href="${result[index].url}">${"Click To Read Articles--"}</a></div>` 
+                            <div class="item"><img src="${item.urlToImage}"> <a href="${item.url}">${item.title}</a></div>`
                         }
                     }
                 }
@@ -54,5 +55,42 @@ async function gettopheadling(){
         console.log(error);
     }
 }
-
 gettopheadling()
+
+let scroolcontainer=document.getElementById('recent')
+let back=document.getElementById('back')
+let forward=document.getElementById('forward')
+console.log(scroolcontainer)
+console.log(back)
+console.log(forward);
+
+scroolcontainer.addEventListener("wheel",function(item){
+    item.preventDefault()
+    scroolcontainer.scrollLeft+=item.deltaY
+})
+back.addEventListener("click",function(){
+    console.log("ayu");
+    scroolcontainer.scrollleft-=900
+})
+
+forward.addEventListener("click",function(){
+    console.log("mis");
+    scroolcontainer.scrollLeft+=900
+})
+let check=true
+const hambtn=document.getElementById('hambtn') 
+const close=document.getElementById('closebar')    
+const nav=document.getElementById('nav')
+console.log(hambtn);
+console.log(close);
+hambtn.addEventListener("click",function(){
+   
+      nav.style.display="flex"
+      hambtn.style.display="none"
+      close.style.display="flex"
+})
+close.addEventListener("click",function(){
+   nav.style.display="none"
+   hambtn.style.display="flex"
+   close.style.display="none"
+})
